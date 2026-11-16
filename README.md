@@ -13,8 +13,18 @@ Dataset: https://www.kaggle.com/datasets/ifuurh/nasdaq100-fundamental-data
 * **Redes Neuronales (MLP):** Multi-Layer Perceptron (MLPClassifier, MLPRegressor)
 * **Optimización y Selección:** RandomizedSearchCV, Stratified K-Fold (5-fold), K-Fold (5-fold)
 
-### Descripción del dataset
-Dataset financiero compuesto por 102 empresas cotizadas en el Nasdaq-100 con 283 columnas que abarcan métricas de valoración, rentabilidad, crecimiento y ratios financieros históricos (2017-2022 y métricas latest)
+
+
+### ¿Qué contiene el dataset?
+El dataset (`nasdaq100_metrics_ratios.csv`) recopila estados financieros y ratios fundamentales de **102 compañías** listadas en el índice **Nasdaq-100** (como Apple, Microsoft, NVIDIA, Amazon, Meta, Broadcom, Adobe, Qualcomm y PayPal), organizados en **283 columnas** divididas en las siguientes categorías:
+
+* **Identificación y clasificación sectorial (4 columnas):** Código bursátil (`symbol`), nombre de la empresa (`company`), sector económico (`sector`, con 7 categorías lideradas por *Information Technology* con el 41,2 %) y subsector específico (`subsector`, con 41 industrias).
+* **Historial financiero multianual (2017–2022) y métricas actuales (`_latest`):** Cada indicador fundamental se reporta de forma anualizada entre 2017 y 2022 junto con su valor consolidado más reciente (`_latest`), permitiendo analizar tanto la fotografía actual como la evolución histórica.
+* **Múltiplos de valoración:** Ratios que comparan el precio de mercado o el valor empresa (*Enterprise Value*) frente a sus ganancias, ventas o flujos de caja (`price_to_earnings_ratio`, `enterprise_value_to_ebitda`, `enterprise_value_to_ebit`, `enterprise_value_to_revenue`, `price_to_free_cashflow`, `price_to_operating_cashflow`).
+* **Rentabilidad y retorno al accionista:** Indicadores de rendimiento operativo y políticas de capital, incluyendo la variable objetivo `rate_of_return_latest` (rango de **-14,87 %** a **25,20 %**, con media de **9,82 %**), el rendimiento por recompra de acciones (`buyback_yield`) y la fórmula de rendimiento de ganancias de Greenblatt (`earning_yield_greenblatt`).
+* **Crecimiento y estabilidad histórica:** Tasas de expansión interanual de ingresos y beneficios por acción (`yoy_revenue_growth`, `yoy_eps_growth`) y promedios de ganancias a 10 años (`e10`).
+* **Solvencia, apalancamiento y salud financiera:** Métricas de estructura de capital y capacidad de pago de deuda (`debt_to_assets`, `debt_to_ebitda`, `equity_to_assets`, `interest_coverage`), además de puntajes compuestos de solidez financiera (`financial_strength`) y detección de manipulación contable (`mscore` de Beneish).
+* **Eficiencia operativa:** Indicadores de gestión de activos, costos e inventarios (`asset_turnover`, `cogs_to_revenue`, `days_inventory`, `scaled_net_operating_assets`).
 
 ### Variables Seleccionadas
 
@@ -44,6 +54,5 @@ Dataset financiero compuesto por 102 empresas cotizadas en el Nasdaq-100 con 283
 # Enlaces
 Codigo: https://colab.research.google.com/drive/1k9hgYnrdWORM7-_G2bz1hNW_W-pH6kaT?usp=sharing
 #
-Video:
-#
-Repositorio: 
+Video: https://youtu.be/ZYt6BgA_uiw
+ 
